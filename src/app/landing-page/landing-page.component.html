@@ -1,0 +1,219 @@
+<header class="header">
+    <div class="top-row d-flex bd-highlight">
+      <div class="p-2 flex-fill bd-highlight">
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <a href="#">
+          <img src="assets/images/logo.png" />
+        </a>
+      </div>
+      <div class="p-2 flex-fill bd-highlight">
+        <div class="outer-menu">
+          <input class="checkbox-toggle" type="checkbox" />
+          <div class="hamburger">
+            <div></div>
+          </div>
+          <div class="menu">
+            <div>
+              <div>
+                <ul>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Products</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-title">
+      <div class="dashboard">
+        <div class="container  d-xxl-flex align-items-center justify-content-between">
+          <div class="title d-flex align-items-center mb-xxl-0 me-30">
+            <div class="icon me-20 me-md-30">
+              <img src="assets/images/icon-login-lg.png" srcset="assets/images/icon-login-lg-2x.png 2x"
+                alt="image description" />
+            </div>
+            <div class="text-box">
+              <h1>Welcome</h1>
+              <h2 class="text-primary">Content Engagement & Compliance Portal </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="login" style="display: none;">
+        <div class="container  d-xxl-flex align-items-center justify-content-between">
+          <div class="title d-flex align-items-center mb-xxl-0 me-30">
+            <div class="icon me-20 me-md-30">
+              <img src="assets/images/icon-login-lg.png" srcset="assets/images/icon-login-lg-2x.png 2x"
+                alt="image description" />
+            </div>
+            <div class="text-box">
+              <h1>Login</h1>
+              <h2 class="text-primary">Account Management</h2>
+            </div>
+          </div>
+          <ul class="info-acc d-flex text-xxl-center">
+            <li>
+              <strong class="text-white d-block mb-5">Percent Complete:</strong>
+              <strong class="text-primary d-block">61%</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <div class="wrapper">
+    <div class="page-holder">
+      <div class="inner-content-box">
+        <main class="main">
+          <div class="btn-sidebar-holder">
+            <button type="button" class="btn-sidebar" (click)="onProfileBtn()">Profile</button>
+          </div>
+          <div class="container-fluid dashboard">
+            <div class="row justify-content-center mx-n1">
+              <div class="col-lg-3 col-xsm-6 col-sm-6 feature-main">
+                <a routerLink="/health-wellness" class="feature-item">
+                  <div class="feature-block-inner">
+                    <div class="feature-item-img">
+                      <img src="assets/images/health-wellness.png" alt="image description">
+                    </div>
+                    <div class="feature-item-body">
+                      <h5 class="text-light mb-0">Health &amp; Wellness </h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-xsm-6 col-sm-6 feature-main">
+                <a routerLink="/safety-training" class="feature-item">
+                  <div class="feature-block-inner">
+                    <div class="feature-item-img">
+                      <img src="assets/images/icon-safety-2x.png" alt="image description">
+                    </div>
+                    <div class="feature-item-body">
+                      <h5 class="text-light mb-0">Safety &amp; Training</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-xsm-6 col-sm-6 feature-main">
+                <a href="#" class="feature-item">
+                  <div class="feature-block-inner">
+                    <div class="feature-item-img">
+                      <img src="assets/images/diversity.png" alt="image description">
+                    </div>
+                    <div class="feature-item-body">
+                      <h5 class="text-light mb-0">Diversity Initiatives</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-xsm-6 col-sm-6 feature-main">
+                <a href="#" class="feature-item">
+                  <div class="feature-block-inner">
+                    <div class="feature-item-img">
+                      <img src="assets/images/esg.png" alt="image description">
+                    </div>
+                    <div class="feature-item-body">
+                      <h5 class="text-light mb-0">ESG </h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="row justify-content-center dash-bottom">
+              <br><br>
+              <h4 class="text-center">Increase Human Capital</h4>
+              <!-- <p class="text-center">Copyright ListenPay, LLC | All Rights Reserved © 2023 <br>Terms of Service | Privacy Policy </p> -->
+            </div>
+          </div>
+          <div class="container-fluid login" style="display: none;">
+            <form class="login-form">
+              <h5 class="mb-30 mb-md-40">Credentials.</h5>
+              <fieldset>
+                <div class="form-group has-success">
+                  <input type="text" class="form-control email-form-control" [(ngModel)]="emailValue" required
+                    [pattern]="emailPattern" name="email" #email="ngModel" (keyup)="onEmailChanged(email)"
+                    [ngModelOptions]="{standalone: true}" placeholder="Enter email address to generate or recall encryption key.....
+                      " email />
+                  <img class="icon icon-mail" src="assets/images/icon-mail.png" srcset="assets/images/icon-mail-2x.png 2x"
+                    alt="image description" />
+                  <a href="#" (click)="createAccount(email)">
+                    <img src="assets/images/icon-key.png" srcset="assets/images/icon-key-2x.png 2x"
+                      alt="image description" />
+                  </a>
+                </div>
+                <div class="form-group has-success">
+                  <input type="text" class="form-control" [ngModel]="key" [ngModelOptions]="{standalone: true}"
+                    placeholder="Account does not exist please press key to generate....
+                      " />
+                  <img class="icon icon-secure" src="assets/images/icon-secure.png"
+                    srcset="assets/images/icon-secure-2x.png 2x" alt="image description" />
+                </div>
+                <div class="text-center d-block form-space-bottom"></div>
+                <div class="text-center d-block">
+                  <a routerLink="/profile-progress" *ngIf="isUserLoggedIn" (click)="getProfileProgress()" class="btn btn-dark lg-width mb-10">Get Progress</a>
+                </div>
+                <div class="text-center d-block">
+                  <a href="#" [class.disabled]="email.invalid"   *ngIf="!isUserLoggedIn" (click)="login(emailValue)" class="btn btn-dark lg-width mb-10">Sign In</a>
+                  <a href="#" *ngIf="isUserLoggedIn" (click)="signOut()" class="btn btn-dark lg-width mb-10">Sign Out</a>
+                </div>
+                <!-- <div class="text-center d-block">
+                      <a href="#" class="btn btn-dark lg-width mb-40">Earn. Redeem.</a>
+                    </div> -->
+              </fieldset>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <footer class="footer text-center">
+    <strong class="d-block">{{getPoint | currency}}</strong>
+    <a href="#" class="text-decoration-none">{{getEmail}}</a>
+    <ul class="footer-list d-flex justify-content-center align-items-center m-0 mt-15">
+      <li class="mx-10 mx-md-20 mx-lg-40 mx-xl-50">
+        <a href="#" (click)="onAppLink()">
+          <img src="assets/images/icon-app.png" [ngClass]="{'selectedFooter': selectedFooterBtn==footerBtnRef.App}"
+            srcset="assets/images/icon-app-2x.png 2x" alt="logo description" />
+        </a>
+      </li>
+      <li class="mx-10 mx-md-20 mx-lg-40 mx-xl-50">
+        <a href="#" (click)="onanalyticsLink()">
+          <img src="assets/images/icon-stats.png"
+            [ngClass]="{'selectedFooter': selectedFooterBtn==footerBtnRef.Analytics}"
+            srcset="assets/images/icon-stats-2x.png 2x" alt="logo description" />
+        </a>
+      </li>
+      <li class="mx-10 mx-md-20 mx-lg-40 mx-xl-50">
+        <a href="#" (click)="onUserLink()">
+          <img src="assets/images/icon-user.png"
+            [ngClass]="{'selectedFooter': selectedFooterBtn==footerBtnRef.User || selectedFooterBtn==footerBtnRef.Login}"
+            srcset="assets/images/icon-user-2x.png 2x" alt="account" />
+        </a>
+      </li>
+      <li class="mx-10 mx-md-20 mx-lg-40 mx-xl-50">
+        <a href="#" (click)="ongiftLink()">
+          <img src="assets/images/icon-gift.png" [ngClass]="{'selectedFooter': selectedFooterBtn==footerBtnRef.Gift}"
+            srcset="assets/images/icon-gift-2x.png 2x" alt="logo description" />
+        </a>
+      </li>
+      <li class="mx-10 mx-md-20 mx-lg-40 mx-xl-50">
+        <a href="#" (click)="onFaqLink()">
+          <img src="assets/images/icon-faq.png" [ngClass]="{'selectedFooter': selectedFooterBtn==footerBtnRef.Faq}"
+            srcset="assets/images/icon-faq-2x.png 2x" alt="logo description" />
+        </a>
+      </li>
+    </ul>
+  </footer>
